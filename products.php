@@ -14,7 +14,7 @@
 					 <h2>Lorem Ipsum is simply </h2>
 					 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
 					 <p><span class="price">$505.22</span></p>
-				     <div class="button"><span><a href="preview.html" class="details">Details</a></span></div>
+				     <div class="button"><span><a href="details.php" class="details">Details</a></span></div>
 				</div>
 				<div class="grid_1_of_4 images_1_of_4">
 					<a href="preview-2.html"><img src="images/feature-pic2.jpg" alt="" /></a>
