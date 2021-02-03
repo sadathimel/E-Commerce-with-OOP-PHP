@@ -2,8 +2,8 @@
 <?php 
 	$al = new Adminlogin();
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-		$adminUser == $_POST['adminUser'];
-		$adminPass == md5($_POST['adminPass']);
+		$adminUser = $_POST['adminUser'];
+		$adminPass = md5($_POST['adminPass']);
 
 		$loginChk = $al->adminlogin($adminUser,$adminPass);
 	}
@@ -20,11 +20,18 @@
 	<section id="content">
 		<form action="login.php" method="post">
 			<h1>Admin Login</h1>
+			<span style="color:red; font-size: 18px;">
+				<?php
+					if (isset($loginChk)) {
+						echo $loginChk;
+					}
+				?>
+			</span>
 			<div>
-				<input type="text" placeholder="Username" required="" name="adminUser"/>
+				<input type="text" placeholder="Username" name="adminUser"/>
 			</div>
 			<div>
-				<input type="password" placeholder="Password" required="" name="adminPass"/>
+				<input type="password" placeholder="Password" name="adminPass"/>
 			</div>
 			<div>
 				<input type="submit" value="Log in" />
