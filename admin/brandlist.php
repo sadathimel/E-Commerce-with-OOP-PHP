@@ -4,10 +4,10 @@
 <?php 
 	$brand = new Brand();
 
-	if (isset($_GET['delcat'])) {
-		$id = $_GET['delcat'];
-		$id = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['delcat']);
-		$delCat = $cat->delCatById($id);
+	if (isset($_GET['delbrand'])) {
+		$id = $_GET['delbrand'];
+		$id = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['delbrand']);
+		$delBrand = $brand->delBrandById($id);
 	}
 ?>
         <div class="grid_10">
@@ -38,7 +38,7 @@
 						<tr class="odd gradeX">
 							<td><?php echo $i; ?></td>
 							<td><?php echo $result['brandName']; ?></td>
-							<td><a href="catedit.php?catid=<?php echo $result['catId'];?>">Edit</a> || <a onclick="return confirm('Are you sure to delete?')" href="?delcat=<?php echo $result['catId'];?>">Delete</a>
+							<td><a href="brandedit.php?brandid=<?php echo $result['brandId'];?>">Edit</a> || <a onclick="return confirm('Are you sure to delete?')" href="?delbrand=<?php echo $result['brandId'];?>">Delete</a>
 							</td>
 						</tr>
 						<?php } } ?>
