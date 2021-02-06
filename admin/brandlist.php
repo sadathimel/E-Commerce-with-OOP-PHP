@@ -15,8 +15,8 @@
                 <h2>Brand List</h2>
                 <div class="block">
                 <?php 
-                	if (isset($delCat)) {
-                		echo $delCat;
+                	if (isset($delBrand)) {
+                		echo $delBrand;
                 	}
                 ?>        
                     <table class="data display datatable" id="example">
