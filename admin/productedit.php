@@ -25,7 +25,8 @@
             if (isset($updateProduct)) {
                 echo $updateProduct;
             }
-        ?> 
+        ?>
+
         <?php 
             $getPro = $pd->getProById($id);
             if ($getPro) {
@@ -140,7 +141,7 @@
 				<tr>
                     <td></td>
                     <td>
-                        <input type="submit" name="submit" Value="Save" />
+                        <input type="submit" name="submit" Value="Update" />
                     </td>
                 </tr>
             </table>
