@@ -8,10 +8,23 @@
 	$fm = new Format();
 ?>
 
+<?php
+	if (isset($_GET['delpro'])) {
+		$id = $_GET['delpro'];
+		$id = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['delpro']);
+		$delPro = $pd->delProById($id);
+	}
+?>
+
 <div class="grid_10">
     <div class="box round first grid">
         <h2>Post List</h2>
-        <div class="block">  
+        <div class="block">
+	        <?php 
+	        	if (isset($delPro)) {
+	        		echo $delPro;
+	        	}
+	        ?>   
             <table class="data display datatable" id="example">
 			<thead>
 				<tr>

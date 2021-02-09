@@ -19,7 +19,7 @@
 
 <div class="grid_10">
     <div class="box round first grid">
-        <h2>Add New Product</h2>
+        <h2>Update Product</h2>
         <div class="block">
         <?php 
             if (isset($updateProduct)) {
