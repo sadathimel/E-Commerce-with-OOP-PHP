@@ -37,8 +37,8 @@
 				<tr class="odd gradeX">
 					<td><?php echo $i; ?></td>
 					<td><?php echo $result['productName']; ?></td>
-					<td><?php echo $result['catId']; ?></td>
-					<td><?php echo $result['brandId']; ?></td>
+					<td><?php echo $result['catName']; ?></td>
+					<td><?php echo $result['brandName']; ?></td>
 					<td><?php echo $fm->textShorten($result['body'], 50); ?></td>
 					<td>$<?php echo $result['price']; ?></td>
 					<td><img src="<?php echo $result['image']; ?>" height="40px" width="60px"></td>
