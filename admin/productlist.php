@@ -51,7 +51,8 @@
 						 	}
 						 ?>	
 					</td>
-					<td><a href="">Edit</a> || <a href="">Delete</a></td>
+					<td><a href="productedit.php?proid=<?php echo $result['productId'];?>">Edit</a> || <a onclick="return confirm('Are you sure to delete?')" href="?delpro=<?php echo $result['productId'];?>">Delete</a>
+					</td>
 				</tr>
 				<?php } } ?>
 				
