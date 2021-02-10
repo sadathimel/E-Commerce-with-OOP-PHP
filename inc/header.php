@@ -1,7 +1,7 @@
 <?php 
     include 'lib/Session.php';
     Session::checkSession();
-    include 'ib/Database.php'; 
+    include 'lib/Database.php'; 
 	include 'helpers/Format.php'; 
 
 	spl_autoload_register(function($class) {
@@ -11,7 +11,7 @@
 	$db = new Database();
 	$fm = new Format();
 	$pd = new Product();
-	$ct = new Cart();
+	$ct = new Cart()
 ?>
 
 <?php
