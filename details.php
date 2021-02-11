@@ -7,12 +7,11 @@
         $id = $_GET['proid'];
     }
 
-    // $brand = new Brand();
-    // if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    //     $brandName = $_POST['brandName'];
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $quantity = $_POST['quantity'];
 
-    //     $updateBrand = $brand->brandUpdate($brandName,$id);
-    // }
+        $addCart = $ct->addToCart($quantity,$id);
+    }
 ?>
 
 
@@ -37,8 +36,8 @@
 						<p>Brand:<span><?php echo $result['brandName']; ?></span></p>
 					</div>
 				<div class="add-cart">
-					<form action="cart.php" method="post">
-						<input type="number" class="buyfield" name="" value="1"/>
+					<form action="" method="post">
+						<input type="number" class="buyfield" name="quantity" value="1"/>
 						<input type="submit" class="buysubmit" name="submit" value="Buy Now"/>
 					</form>				
 				</div>
